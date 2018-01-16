@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<classpath>
+	<classpathentry kind="con" path="org.eclipse.jdt.launching.JRE_CONTAINER/org.eclipse.jdt.internal.debug.ui.launcher.StandardVMType/JavaSE-1.8"/>
+	<classpathentry kind="src" path="src"/>
+	<classpathentry kind="lib" path="C:/ISEP/SI/unboundid-ldapsdk-4.0.3.zip"/>
+	<classpathentry kind="lib" path="C:/ISEP/SI/apache-ldap-api-1.0.0-bin.zip"/>
+	<classpathentry kind="lib" path="C:/ISEP/SI/unboundid-ldapsdk-4.0.3/unboundid-ldapsdk.jar"/>
+	<classpathentry kind="output" path="bin"/>
+</classpath>
