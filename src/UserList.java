@@ -14,12 +14,15 @@ public class UserList {
 	
 	
 	
-	public void totalUser() throws NamingException
-	{
-		
+	public void totalUser(String ecole) throws NamingException
+	{	
+		int port = 0;
+		if(ecole.toLowerCase().equals("ensiie")) {
+			port = 2349;
+		}
 		Properties initialProperties = new Properties();
 		initialProperties.put(Context.INITIAL_CONTEXT_FACTORY,"com.sun.jndi.ldap.LdapCtxFactory");
-		initialProperties.put(Context.PROVIDER_URL, "ldap://localhost:2349");
+		initialProperties.put(Context.PROVIDER_URL, "ldap://localhost:"+port);
 		initialProperties.put(Context.SECURITY_PRINCIPAL, "CN=Directory Manager");
 		initialProperties.put(Context.SECURITY_CREDENTIALS, "password");
 		DirContext  context = new InitialDirContext(initialProperties);
@@ -51,7 +54,7 @@ public class UserList {
 		public static void main(String[] args) throws NamingException  
 	{
 		UserList sample = new UserList();
-		sample.totalUser();
+		sample.totalUser("ensiie");
 		
 	}
 
